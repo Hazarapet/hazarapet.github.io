@@ -20,4 +20,5 @@ My research interests are Alternative Operations of Convolutions, Dynamic Neural
 Neural Scene Rendering, Iterative Optimization Problems, and Self or Semi-Supervised Learning.
 
 I hold M.Sc. and B.Sc. degrees in Informatics and Applied Mathematics
-from <strong><a href="http://www.ysu.am/ysu/en" target="_blank">Yerevan State University (YSU)</a></strong>.
+from <strong><a href="http://www.ysu.am/ysu/en" target="_blank">Yerevan State University (YSU)</a></strong> 
+and have more than 5 years experience of software engineering.
