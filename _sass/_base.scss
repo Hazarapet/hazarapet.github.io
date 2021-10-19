@@ -395,10 +395,16 @@ footer.sticky-bottom {
 
     li {
       margin-bottom: 1rem;
+      .cover {
+        height: 8rem;
+        overflow: hidden;
+      }
       .abbr {
         height: 2rem;
         margin-bottom: 0.5rem;
         abbr {
+          top: 0.5rem;
+          position: absolute;
           display: inline-block;
           background-color: var(--global-theme-color);
           padding-left: 1rem;
