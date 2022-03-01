@@ -12,7 +12,7 @@ news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 ---
 
-I'm a Machine Learning Scientist at <strong><a href="https://www.picsart.com" target="_blank">Picsart</a></strong>, 
+I'm a Senior Machine Learning Scientist at <strong><a href="https://www.picsart.com" target="_blank">Picsart</a></strong>, 
 working on computer vision tasks such as semantic and instance segmentation, object detection and object tracking. 
 Also, working on optimization problems of neural networks for edge devices like mobile phones.
 
