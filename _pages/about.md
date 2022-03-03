@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-description: Machine Learning Scientist at Picsart Inc.
+description: Sr. Machine Learning Scientist at Picsart Inc.
 
 profile:
   align: right
