@@ -405,6 +405,7 @@ footer.sticky-bottom {
         margin-bottom: 0.5rem;
         abbr {
           top: 0.5rem;
+          font-size: 80%;
           position: absolute;
           display: inline-block;
           background-color: var(--global-theme-color);
@@ -427,7 +428,7 @@ footer.sticky-bottom {
       }
       .author {
         a {
-          border-bottom: 1px dashed var(--global-theme-color);
+          // border-bottom: 1px dashed var(--global-theme-color);
           &:hover {
               border-bottom-style: solid;
               text-decoration: none;

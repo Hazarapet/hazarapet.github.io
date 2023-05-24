@@ -2,11 +2,37 @@
 ---
 
 @string{BMVC = {British Machine Vision Conference (BMVC)}}
+@string{CVPR = {IEEE / CVF Computer Vision and Pattern Recognition Conference (CVPR)}}
+
+@inproceedings{specialist-diffusion,
+  abbr={CVPR},
+  title={Specialist Diffusion: Plug-and-Play Sample-Efficient Fine-Tuning of Text-to-Image Diffusion Models to Learn Any Unseen Style},
+  author={Lu, Haoming and Tunanyan, Hazarapet and Wang, Kai and Navasardyan, Shant and Wang, Zhangyang and Shi, Humphrey},
+  abstract={Diffusion models have demonstrated impressive capability of text-conditioned image synthesis, and broader application horizons 
+    are emerging by personalizing those pretrained diffusion models toward generating some specialized target object or style. 
+    In this paper, we aim to learn an unseen style by simply fine-tuning a pre-trained diffusion model with a handful of images 
+    (e.g., less than 10), so that the fine-tuned model can generate high-quality images of arbitrary objects in this style. 
+    Such extremely lowshot fine-tuning is accomplished by a novel toolkit of finetuning techniques, including text-to-image 
+    customized data augmentations, a content loss to facilitate content-style disentanglement, and sparse updating that 
+    focuses on only a few time steps. Our framework, dubbed Specialist Diffusion, is plug-and-play to existing diffusion model 
+    backbones and other personalization techniques. We demonstrate it to outperform the latest few-shot personalization 
+    alternatives of diffusion models such as Textual Inversion and DreamBooth, in terms of learning highly sophisticated 
+    styles with ultra-sample-efficient tuning. We further show that Specialist Diffusion can be integrated on top of 
+    Textual Inversion to boost performance further, even on highly unusual styles.},
+  year={2023},
+  month={Jun},
+  website={https://specialist-diffusion.github.io},
+  booktitle=CVPR,
+  poster={specialist-diffusion-poster.pdf},
+  paper={https://openaccess.thecvf.com/content/CVPR2023/papers/Lu_Specialist_Diffusion_Plug-and-Play_Sample-Efficient_Fine-Tuning_of_Text-to-Image_Diffusion_Models_To_CVPR_2023_paper.pdf},
+  cover={specialist-diffusion.png},
+  selected={true}
+}
 
 @inproceedings{c4net,
   abbr={BMVC},
   title={C4Net: Contextual Compression and Complementary Combination Network for Salient Object Detection},
-  author={Hazarapet Tunanyan},
+  author={Tunanyan, Hazarapet},
   abstract={Deep learning solutions of the salient object detection problem have achieved great results in recent years.
     The majority of these models are based on encoders and decoders, with a different multi-feature combination.
     In this paper, we show that feature concatenation works better than other combination methods like multiplication or
@@ -19,10 +45,10 @@
     methods on all benchmark datasets under three evaluation metrics},
   year={2021},
   month={Nov},
-  url={},
   booktitle=BMVC,
   arxiv={2110.11887},
   poster={https://www.bmvc2021-virtualconference.com/conference/papers/paper_1077.html},
   cover={c4net.png},
   selected={true}
 }
+

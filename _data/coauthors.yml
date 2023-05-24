@@ -1,18 +1,19 @@
-"Adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+"Haoming":
+  - firstname: ["Haoming"]
+    url: https://github.com/alonewithyou
 
-"Podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"Kai":
+  - firstname: ["Kai"]
+    url: https://wangk.ai/
 
-"Rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"Shant":
+  - firstname: ["Shant"]
+    url: https://www.linkedin.com/in/shant-navasardyan-1302aa149/
 
-"Bach": 
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
+"Zhangyang":
+  - firstname: ["Zhangyang", "Atlas"]
+    url: https://www.ece.utexas.edu/people/faculty/atlas-wang
 
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+"Humphrey":
+  - firstname: ["Humphrey"]
+    url: https://www.humphreyshi.com/
