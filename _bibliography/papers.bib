@@ -4,6 +4,31 @@
 @string{BMVC = {British Machine Vision Conference (BMVC)}}
 @string{CVPR = {IEEE / CVF Computer Vision and Pattern Recognition Conference (CVPR)}}
 
+@inproceedings{multi-concept-t2i-zero,
+  abbr={Arxiv},
+  title={Multi-Concept T2I-Zero: Tweaking Only The Text Embeddings and Nothing Else},
+  author={Tunanyan, Hazarapet and Xu, Dejia and Navasardyan, Shant and Wang, Zhangyang and Shi, Humphrey},
+  abstract={Recent advances in text-to-image diffusion models have enabled the photorealistic generation of images from text prompts. 
+    Despite the great progress, existing models still struggle to generate compositional multi-concept images naturally, 
+    limiting their ability to visualize human imagination. While several recent works have attempted to address this issue, 
+    they either introduce additional training or adopt guidance at inference time. In this work, we consider a more ambitious goal: 
+    natural multi-concept generation using a pre-trained diffusion model, and with almost no extra cost. To achieve this goal, 
+    we identify the limitations in the text embeddings used for the pre-trained text-to-image diffusion models. Specifically, 
+    we observe concept dominance and non-localized contribution that severely degrade multi-concept generation performance. 
+    We further design a minimal low-cost solution that overcomes the above issues by tweaking (not re-training) the text embeddings 
+    for more realistic multi-concept text-to-image generation. Our Correction by Similarities method tweaks the embedding of 
+    concepts by collecting semantic features from most similar tokens to localize the contribution. To avoid mixing features of concepts, 
+    we also apply Cross-Token Non-Maximum Suppression, which excludes the overlap of contributions from different concepts. 
+    Experiments show that our approach outperforms previous methods in text-to-image, image manipulation, and personalization tasks, 
+    despite not introducing additional training or inference costs to the diffusion steps.},
+  year={2023},
+  website={https://multi-concept-t2i-zero.github.io/},
+  booktitle={Arxiv preprint},
+  arxiv={2310.07419}
+  cover={multi-concept-t2i-zero.png},
+  selected={true}
+}
+
 @inproceedings{specialist-diffusion,
   abbr={CVPR},
   title={Specialist Diffusion: Plug-and-Play Sample-Efficient Fine-Tuning of Text-to-Image Diffusion Models to Learn Any Unseen Style},
