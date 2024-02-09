@@ -14,7 +14,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 
 I am a Senior Machine Learning Scientist at <strong><a href="https://www.picsart.com" target="_blank">Picsart</a></strong>, 
 working on generative tasks such as text-to-image synthisis and its customizations. 
-Also, worked on other computer vision tasks which included semantic and instance segmentation, object detection, and object tracking.
+Also, I worked on other computer vision tasks which included semantic and instance segmentation, object detection, and object tracking.
 
 My research interests align with Deep Generative Methods, Conditional and Unconditional Diffusion, Multi-Modal Large Language Models, and Iterative Optimization Problems.
 
