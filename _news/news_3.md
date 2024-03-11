@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2021-10-19
+date: 2023-03-01
 inline: true
 ---
 
-A paper has been accepted at <strong><a href="https://www.bmvc2021.com/" target="_blank">BMVC2021</a></strong> conference.
+A paper has been accepted at <strong><a href="https://cvpr2023.thecvf.com/" target="_blank">CVPR2023</a></strong> conference.

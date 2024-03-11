@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2018-09-18
+date: 2019-09-01
 inline: true
 ---
 
-Joined <strong><a href="https://www.picsart.com" target="_blank">Picsart</a></strong> as a Machine Learning Scientist.
+Joined <strong><a href="http://www.ysu.am/ysu/en" target="_blank">Yerevan State University (YSU)</a></strong> as a Adjunct Lecturer.

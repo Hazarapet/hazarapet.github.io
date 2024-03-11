@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2023-03-01
+date: 2023-09-09
 inline: true
 ---
 
-A paper has been accepted at <strong><a href="https://cvpr2023.thecvf.com/" target="_blank">CVPR2023</a></strong> conference.
+Gave a talk at the <strong><a href="https://datafest.am/2023/speakers" target="_blank">Datafest 2023</a></strong> conference.

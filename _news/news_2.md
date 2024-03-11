@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2019-09-01
+date: 2021-10-19
 inline: true
 ---
 
-Joined <strong><a href="http://www.ysu.am/ysu/en" target="_blank">Yerevan State University (YSU)</a></strong> as a Lecturer.
+A paper has been accepted at <strong><a href="https://www.bmvc2021.com/" target="_blank">BMVC2021</a></strong> conference.
