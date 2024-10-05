@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-description: Sr. Machine Learning Scientist at Picsart Inc.
+description: Staff Data Scientist at Grid Dynamics.
 
 profile:
   align: right
@@ -11,9 +11,8 @@ profile:
 news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 ---
-
-I am a Senior Machine Learning Scientist at <strong><a href="https://www.picsart.com" target="_blank">Picsart</a></strong>, 
-working on generative tasks such as text-to-image synthisis and its customizations. 
+I am a Staff Data Scientist at Grid Dynamics working on computer vision and deep learning problems. 
+Previously I have been a Senior Machine Learning Scientist at Picsart, working on generative tasks such as text-to-image synthisis and its customizations. 
 Also, I worked on other computer vision tasks which included semantic and instance segmentation, object detection, and object tracking.
 
 My research interests align with Deep Generative Methods, Conditional and Unconditional Diffusion, Multi-Modal Large Language Models, and Iterative Optimization Problems.
