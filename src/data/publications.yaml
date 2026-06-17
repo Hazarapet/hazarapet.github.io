@@ -1,0 +1,43 @@
+# Newest first. Set `featured: true` to show a paper on the homepage.
+# `authors` allows HTML — wrap your own name in <strong> to highlight it.
+# Any link left out is simply not shown.
+
+- title: "Multi-Concept T2I-Zero: Tweaking Only The Text Embeddings and Nothing Else"
+  authors: "<strong>Hazarapet Tunanyan</strong>, <a href='https://ir1d.github.io/' target='_blank'>Dejia Xu</a>, <a href='https://www.linkedin.com/in/shant-navasardyan-1302aa149/' target='_blank'>Shant Navasardyan</a>, <a href='https://www.ece.utexas.edu/people/faculty/atlas-wang' target='_blank'>Zhangyang Wang</a>, and <a href='https://www.humphreyshi.com/' target='_blank'>Humphrey Shi</a>"
+  venue: "Arxiv preprint"
+  year: 2023
+  thumbnail: "/images/publications/multi-concept-t2i-zero.png"
+  featured: true
+  abstract: >
+    In this work, we consider a more ambitious goal: natural multi-concept generation using a pre-trained diffusion model, 
+    and with almost no extra cost. 
+  links:
+    arxiv: "https://arxiv.org/abs/2310.07419"
+    project: "https://multi-concept-t2i-zero.github.io/"
+
+- title: "Specialist Diffusion: Plug-and-Play Sample-Efficient Fine-Tuning of Text-to-Image Diffusion Models to Learn Any Unseen Style"
+  authors: "<a href='https://github.com/alonewithyou' target='_blank'>Haoming Lu</a>, <strong>Hazarapet Tunanyan</strong>, <a href='https://wangk.ai/' target='_blank'>Kai Wang</a>, <a href='https://www.linkedin.com/in/shant-navasardyan-1302aa149/' target='_blank'>Shant Navasardyan</a>, <a href='https://www.ece.utexas.edu/people/faculty/atlas-wang' target='_blank'>Zhangyang Wang</a>, and <a href='https://www.humphreyshi.com/' target='_blank'>Humphrey Shi</a>"
+  venue: "IEEE / CVF Computer Vision and Pattern Recognition Conference (CVPR)"
+  year: 2023
+  thumbnail: "/images/publications/specialist-diffusion.png"
+  featured: true
+  abstract: >
+    In this paper, we aim to learn an unseen style, so that the fine-tuned model can generate 
+    high-quality images of arbitrary objects in this style.
+  links:
+    pdf: "https://openaccess.thecvf.com/content/CVPR2023/papers/Lu_Specialist_Diffusion_Plug-and-Play_Sample-Efficient_Fine-Tuning_of_Text-to-Image_Diffusion_Models_To_CVPR_2023_paper.pdf"
+    code: "https://github.com/Picsart-AI-Research/Specialist-Diffusion"
+    project: "https://specialist-diffusion.github.io/"
+    poster: "/assets/pdf/specialist-diffusion-poster.pdf"
+
+- title: "C4Net: Contextual Compression and Complementary Combination Network for Salient Object Detection"
+  authors: "<strong>Hazarapet Tunanyan</strong>"
+  venue: "BMVC"
+  year: 2021
+  thumbnail: "/images/publications/c4net.png"
+  featured: true
+  abstract: >
+    The paper proposes a salient object detection model using feature concatenation, 
+    complementary feature extraction, excessiveness loss, and pyramid-semantic guidance.
+  links:
+    arxiv: "https://arxiv.org/abs/2110.11887"

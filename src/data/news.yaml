@@ -1,0 +1,13 @@
+# Newest first. `text` allows basic HTML (links, bold).
+- date: "Dec 2025"
+  text: "Joined <a href='https://deeporigin.com/' target='_blank'>Deep Origin</a> as a <strong>Senior Machine Learning Researcher</strong>."
+- date: "Sep 2023"
+  text: "Gave a talk at the <a href='https://datafest.am/2023/speakers' target='_blank'>Datafest 2023</a> conference."
+- date: "Mar 2023"
+  text: "A paper has been accepted at <a href='https://cvpr2023.thecvf.com/' target='_blank'>CVPR2023</a> conference."
+- date: "Oct 2021"
+  text: "A paper has been accepted at <strong>BMVC2021</strong> conference."
+- date: "Sep 2019"
+  text: "Joined <a href='https://www.ysu.am/en' target='_blank'>Yerevan State University</a> as an Adjunct Lecturer."
+- date: "Sep 2018"
+  text: "Joined <a href='https://www.picsart.com' target='_blank'>Picsart</a> as a Senior Machine Learning Scientist."

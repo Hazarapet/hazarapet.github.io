@@ -1,0 +1,77 @@
+@use 'sass:color';
+@use 'variables' as *;
+
+// ── Reset ───────────────────────────────────────────────────
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: $font-body;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color-text;
+  background: $color-bg;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// Links use the primary brand color (single source: $color-primary).
+// No underline by default (modern); underline only on hover.
+a {
+  color: $color-primary;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+
+// ── Layout ──────────────────────────────────────────────────
+.container {
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+main.container {
+  padding-top: 1.4rem;
+  padding-bottom: 3rem;
+}
+
+// ── Headings ────────────────────────────────────────────────
+h1,
+h2,
+h3 {
+  font-family: $font-heading;
+  line-height: 1.25;
+  color: $color-heading;
+}
+
+// ── Page (inner) heading used by /publications etc. ─────────
+.page-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem;
+}
+
+// ── Respect reduced-motion globally ─────────────────────────
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

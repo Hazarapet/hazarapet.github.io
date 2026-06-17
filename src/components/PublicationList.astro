@@ -1,0 +1,17 @@
+---
+import publications from '../data/publications.yaml';
+import PublicationCard from './PublicationCard.astro';
+
+interface Props {
+  featuredOnly?: boolean;
+}
+const { featuredOnly = false } = Astro.props;
+
+const pubs = featuredOnly
+  ? (publications as any[]).filter((p) => p.featured)
+  : (publications as any[]);
+---
+
+<div class="pub-list">
+  {pubs.map((pub) => <PublicationCard pub={pub} />)}
+</div>

@@ -1,0 +1,47 @@
+---
+import Base from '../layouts/Base.astro';
+import Bio from '../components/Bio.astro';
+import Affiliations from '../components/Affiliations.astro';
+import Section from '../components/Section.astro';
+import NewsList from '../components/NewsList.astro';
+import PublicationList from '../components/PublicationList.astro';
+import TalkList from '../components/TalkList.astro';
+import ServiceList from '../components/ServiceList.astro';
+import TeachingList from '../components/TeachingList.astro';
+---
+
+<Base>
+  <Bio />
+
+  <Section title="Experience">
+    <Affiliations />
+  </Section>
+
+  <Section title="News" id="news">
+    <NewsList limit={5} />
+  </Section>
+
+  <Section title="Selected Publications">
+    <PublicationList featuredOnly />
+    <p class="more-link"><a href="/publications">All publications &rarr;</a></p>
+  </Section>
+
+  <Section title="Teaching">
+    <TeachingList />
+  </Section>
+
+  <Section title="Talks">
+    <TalkList />
+  </Section>
+
+  <Section title="Services">
+    <ServiceList />
+  </Section>
+</Base>
+
+<style>
+  .more-link {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+  }
+</style>

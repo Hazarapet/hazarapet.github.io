@@ -1,0 +1,69 @@
+---
+import teaching from '../data/teaching.yaml';
+
+type Course = {
+  term: string;
+  title: string;
+  role?: string;
+  institution?: string;
+  description?: string;
+};
+const items = teaching as Course[];
+---
+
+<ul class="teaching">
+  {
+    items.map((c) => (
+      <li class="teaching__item">
+        <div class="teaching__head">
+          <span class="teaching__title">{c.title}</span>
+          <span class="teaching__term">{c.term}</span>
+        </div>
+        {(c.role || c.institution) && (
+          <p class="teaching__meta">
+            {[c.role, c.institution].filter(Boolean).join(' · ')}
+          </p>
+        )}
+        {c.description && <p class="teaching__desc">{c.description}</p>}
+      </li>
+    ))
+  }
+</ul>
+
+<style lang="scss">
+  @use '../styles/variables' as *;
+
+  .teaching {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .teaching__item {
+    padding: 0.9rem 0;
+    border-bottom: 1px solid $color-border;
+  }
+  .teaching__item:last-child {
+    border-bottom: 0;
+  }
+  .teaching__head {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .teaching__title {
+    font-weight: 600;
+  }
+  .teaching__term {
+    color: $color-muted;
+    flex: 0 0 auto;
+  }
+  .teaching__meta {
+    margin: 0.2rem 0 0;
+    color: $color-muted;
+    font-size: 0.92rem;
+  }
+  .teaching__desc {
+    margin: 0.4rem 0 0;
+    font-size: 0.95rem;
+  }
+</style>

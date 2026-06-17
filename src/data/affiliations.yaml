@@ -1,0 +1,14 @@
+# Logo banner shown under the bio. Replace the SVGs in
+# public/images/affiliations/ with real logos (PNG/SVG) when you have them.
+- name: "Deep Origin"
+  role: "Senior Machine Learning Researcher"
+  dates: "Dec 2025 – now"
+  logo: "/images/affiliations/deep_origin.svg"
+- name: "Picsart"
+  role: "Senior Machine Learning Scientist"
+  dates: "Sep 2018 – Feb 2024"
+  logo: "/images/affiliations/picsart.png"
+- name: "Yerevan State University"
+  role: "Adjunct Lecturer"
+  dates: "Sep 2019 – Feb 2020"
+  logo: "/images/affiliations/ysu.png"

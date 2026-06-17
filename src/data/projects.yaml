@@ -1,0 +1,12 @@
+# Order as you like.
+- title: "OpenDiffusion"
+  description: "An open-source toolkit for training and sampling diffusion models."
+  thumbnail: "/images/publications/paper-1.svg"
+  links:
+    code: "https://github.com"
+    project: "#"
+- title: "VisionKit"
+  description: "Lightweight vision transformer implementations for edge devices."
+  thumbnail: "/images/publications/paper-3.svg"
+  links:
+    code: "https://github.com"

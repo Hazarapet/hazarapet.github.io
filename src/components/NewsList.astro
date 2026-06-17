@@ -1,0 +1,99 @@
+---
+import news from '../data/news.yaml';
+
+interface Props {
+  limit?: number;
+}
+const { limit } = Astro.props;
+
+type NewsItem = { date: string; text: string };
+const all = news as NewsItem[];
+const visible = limit ? all.slice(0, limit) : all;
+const hidden = limit ? all.slice(limit) : [];
+---
+
+<ul class="news">
+  {
+    visible.map((n) => (
+      <li class="news__item">
+        <span class="news__date">{n.date}</span>
+        <span class="news__text" set:html={n.text} />
+      </li>
+    ))
+  }
+</ul>
+
+{
+  hidden.length > 0 && (
+    // Native <details> = a "Show older" toggle with zero JavaScript.
+    <details class="news__more">
+      <summary>Show older &rarr;</summary>
+      <ul class="news">
+        {hidden.map((n) => (
+          <li class="news__item">
+            <span class="news__date">{n.date}</span>
+            <span class="news__text" set:html={n.text} />
+          </li>
+        ))}
+      </ul>
+    </details>
+  )
+}
+
+<style lang="scss">
+  @use '../styles/variables' as *;
+
+  .news {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 13.5px;
+    line-height: 1.45;
+  }
+  .news__item {
+    display: flex;
+    gap: 16px;
+    padding: 5px 0;
+    align-items: baseline;
+  }
+  .news__date {
+    flex: 0 0 80px;
+    color: $color-muted;
+    font-size: 12px;
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+  }
+  .news__text {
+    flex: 1 1 auto;
+  }
+  .news__more {
+    margin-top: 0.75rem;
+  }
+  .news__more summary {
+    cursor: pointer;
+    color: $color-muted;
+    font-size: 0.95rem;
+    width: max-content;
+    list-style: none;
+  }
+  .news__more summary::-webkit-details-marker {
+    display: none;
+  }
+  .news__more summary:hover {
+    color: $color-heading;
+  }
+  .news__more[open] summary {
+    margin-bottom: 0.35rem;
+  }
+
+  @media (max-width: 480px) {
+    .news__item {
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+    .news__date {
+      flex-basis: auto;
+      font-size: 0.85rem;
+    }
+  }
+</style>

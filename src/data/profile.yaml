@@ -1,0 +1,50 @@
+# ─────────────────────────────────────────────────────────────
+# YOUR PROFILE — edit this file to make the site yours.
+# Nothing here is code; just fill in the values.
+# ─────────────────────────────────────────────────────────────
+
+name: "Hazarapet Tunanyan"
+# Short mark shown in the top-left of the header (e.g. your initials).
+logo: "HT"
+title: "Senior Machine Learning Researcher"
+# Rendered next to the title as "title · affiliation".
+affiliation: "Deep Origin"
+photo: "/images/avatar3.png"
+
+# A short bio. Basic HTML (e.g. <a>, <strong>) is allowed.
+bio: >
+  I am a Senior Machine Learning Researcher at the
+  <a href="https://deeporigin.com/" target="_blank">Deep Origin</a>, working on <strong>drug discover, bioscience</strong>. 
+  Previously I have been a Senior Machine Learning Scientist at <a href="https://picsart.com/" target="_blank">Picsart</a>, 
+  working on <strong>computer vision</strong> tasks such as text-to-image synthisis, semantic and instance segmentation.
+  <br/><br/>
+  I hold <strong>M.Sc.</strong> degree in Informatics and Applied Mathematics from 
+  <a href="https://www.ysu.am/en" target="_blank">Yerevan State University</a> and have 5 years of experience in software engineering.
+
+# Shown as a "·"-separated line under the bio.
+interests:
+  - "Bioscience"
+  - "Drug Discovery"
+  - "Diffusion Models"
+  - "Computer Vision"
+
+# Social links, shown as pill buttons in the order listed below.
+# `primary` is the key of the one filled/accented button.
+# Leave any url blank ("") to hide that link.
+social:
+  primary: scholar
+  scholar: "https://scholar.google.com/citations?user=FG7MnFcAAAAJ"
+  github: "https://github.com/hazarapet"
+  # cv: "/files/cv.pdf"
+  email: "hazarapettunanyan@gmail.com"
+  linkedin: "https://www.linkedin.com/in/hazarapet"
+  twitter: "https://twitter.com/hazarapett"
+
+# Top navigation. Add/remove items freely.
+nav:
+  - { label: "About", href: "/" }
+  - { label: "Publications", href: "/publications" }
+
+# Optional hero particle background (see README). Off by default.
+hero:
+  particles: false

@@ -1,0 +1,104 @@
+---
+import projects from '../data/projects.yaml';
+
+type Project = {
+  title: string;
+  description?: string;
+  thumbnail?: string;
+  links?: Record<string, string>;
+};
+const items = projects as Project[];
+
+const linkOrder: [string, string][] = [
+  ['code', 'Code'],
+  ['project', 'Website'],
+  ['paper', 'Paper'],
+];
+---
+
+<div class="projects">
+  {
+    items.map((p) => {
+      const links = linkOrder
+        .filter(([key]) => p.links?.[key])
+        .map(([key, label]) => ({ label, href: p.links![key] }));
+      return (
+        <article class="project">
+          {p.thumbnail && (
+            <div class="project__thumb">
+              <img src={p.thumbnail} alt={p.title} loading="lazy" />
+            </div>
+          )}
+          <div class="project__body">
+            <h3 class="project__title">{p.title}</h3>
+            {p.description && <p class="project__desc">{p.description}</p>}
+            {links.length > 0 && (
+              <p class="project__links">
+                {links.map((l) => (
+                  <a class="project__link" href={l.href} rel="noopener">
+                    {l.label}
+                  </a>
+                ))}
+              </p>
+            )}
+          </div>
+        </article>
+      );
+    })
+  }
+</div>
+
+<style lang="scss">
+  @use '../styles/variables' as *;
+
+  .project {
+    display: flex;
+    gap: 1.25rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid $color-border;
+  }
+  .project:last-child {
+    border-bottom: 0;
+  }
+  .project__thumb {
+    flex: 0 0 140px;
+  }
+  .project__thumb img {
+    width: 140px;
+    border-radius: $radius;
+    border: 1px solid $color-border;
+    background: $color-surface;
+  }
+  .project__title {
+    font-size: 1.05rem;
+    margin: 0 0 0.3rem;
+  }
+  .project__desc {
+    margin: 0 0 0.5rem;
+    font-size: 0.95rem;
+  }
+  .project__link {
+    text-decoration: none;
+  }
+  .project__link:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .project__link:not(:last-child)::after {
+    content: '  ·  ';
+    color: $color-secondary;
+    text-decoration: none;
+  }
+
+  @media (max-width: 600px) {
+    .project {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .project__thumb,
+    .project__thumb img {
+      width: 100%;
+      max-width: 220px;
+    }
+  }
+</style>

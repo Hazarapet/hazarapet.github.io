@@ -1,0 +1,25 @@
+---
+import profile from '../data/profile.yaml';
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <p>
+      &copy; Copyright 2026 {profile.name} 
+    </p>
+  </div>
+</footer>
+
+<style lang="scss">
+  @use '../styles/variables' as *;
+
+  .site-footer {
+    border-top: 1px solid $color-border;
+    color: $color-muted;
+    font-size: 0.9rem;
+  }
+  .site-footer .container {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+</style>

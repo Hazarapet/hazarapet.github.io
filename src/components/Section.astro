@@ -1,0 +1,31 @@
+---
+interface Props {
+  title: string;
+  id?: string;
+}
+const { title, id } = Astro.props;
+---
+
+<section class="section" id={id}>
+  <h2 class="section__title">{title}</h2>
+  <slot />
+</section>
+
+<style lang="scss">
+  @use '../styles/variables' as *;
+
+  .section {
+    margin-top: 1.85rem;
+    padding-top: 1.85rem;
+    border-top: 1px solid $color-border;
+  }
+  .section__title {
+    font-family: $font-heading;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $color-text;
+    margin: 0 0 1.1rem;
+  }
+</style>

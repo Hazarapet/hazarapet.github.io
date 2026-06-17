@@ -1,0 +1,193 @@
+---
+interface Pub {
+  title: string;
+  authors: string;
+  venue?: string;
+  year?: number;
+  thumbnail?: string;
+  abstract?: string;
+  links?: Record<string, string>;
+}
+const { pub } = Astro.props as { pub: Pub };
+
+// Each link type → label, a meaning-based color, and an inline icon.
+const META: Record<string, { label: string; color: string; icon: string }> = {
+  arxiv: {
+    label: 'arXiv',
+    color: '#B31B1B',
+    icon: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>',
+  },
+  pdf: {
+    label: 'PDF',
+    color: '#DC2626',
+    icon: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13z"/></svg>',
+  },
+  code: {
+    label: 'Code',
+    color: '#334155',
+    icon: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.4 16.6 4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0 4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>',
+  },
+  project: {
+    label: 'Project',
+    color: '#2563EB',
+    icon: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1 17.93A8 8 0 0 1 4 12c0-.62.08-1.21.21-1.79L9 15v1a2 2 0 0 0 2 2v1.93zM17.9 17.39c-.26-.81-1-1.39-1.9-1.39h-1v-3a1 1 0 0 0-1-1H8v-2h2a1 1 0 0 0 1-1V7h2a2 2 0 0 0 2-2v-.41A8 8 0 0 1 17.9 17.39z"/></svg>',
+  },
+  poster: {
+    label: 'Poster',
+    color: '#7C3AED',
+    icon: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 19V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>',
+  },
+  slides: {
+    label: 'Slides',
+    color: '#EA580C',
+    icon: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 8v8l5-4-5-4zm9-5H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm0 16H5V5h14v14z"/></svg>',
+  },
+  video: {
+    label: 'Video',
+    color: '#DB2777',
+    icon: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>',
+  },
+  bibtex: {
+    label: 'BibTeX',
+    color: '#6B7280',
+    icon: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 17h3l2-4V7H5v6h3l-2 4zm8 0h3l2-4V7h-6v6h3l-2 4z"/></svg>',
+  },
+};
+const order = ['arxiv', 'pdf', 'code', 'project', 'poster', 'slides', 'video', 'bibtex'];
+const links = order
+  .filter((key) => pub.links?.[key])
+  .map((key) => ({ ...META[key], href: pub.links![key] }));
+
+const venueLine = [pub.venue, pub.year].filter(Boolean).join(', ');
+---
+
+<article class="pub">
+  {
+    pub.thumbnail && (
+      <div class="pub__thumb">
+        <img src={pub.thumbnail} alt={pub.title} loading="lazy" />
+      </div>
+    )
+  }
+  <div class="pub__body">
+    <h3 class="pub__title">{pub.title}</h3>
+    <p class="pub__authors" set:html={pub.authors} />
+    {venueLine && <p class="pub__venue">{venueLine}</p>}
+    {pub.abstract && <p class="pub__abstract">{pub.abstract}</p>}
+    {
+      links.length > 0 && (
+        <p class="pub__links">
+          {links.map((l) => (
+            <a
+              class="pub__link"
+              href={l.href}
+              rel="noopener"
+              target="_blank"
+              style={`--c:${l.color}`}
+            >
+              <span class="pub__link-icon" set:html={l.icon} />
+              {l.label}
+            </a>
+          ))}
+        </p>
+      )
+    }
+  </div>
+</article>
+
+<style lang="scss">
+  @use '../styles/variables' as *;
+
+  .pub {
+    display: flex;
+    gap: 1.25rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid $color-border;
+  }
+  .pub:last-child {
+    border-bottom: 0;
+  }
+  .pub__thumb {
+    flex: 0 0 140px;
+  }
+  .pub__thumb img {
+    width: 140px;
+    border-radius: $radius;
+    border: 1px solid $color-border;
+    background: $color-surface;
+  }
+  .pub__body {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  .pub__title {
+    font-family: $font-body;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.2px;
+    line-height: 1.4;
+    margin: 0 0 3px;
+  }
+  .pub__authors {
+    margin: 0 0 6px;
+    font-size: 12.5px;
+  }
+  .pub__venue {
+    margin: 0 0 6px;
+    color: $color-muted;
+    font-size: 12.5px;
+    font-style: italic;
+  }
+  .pub__abstract {
+    margin: 0 0 8px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: $color-text;
+  }
+  .pub__links {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .pub__link {
+    --c: #6b7280;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+    padding: 3px 9px;
+    border-radius: 999px;
+    color: var(--c);
+    background: color-mix(in srgb, var(--c) 8%, transparent);
+    border: 1px solid color-mix(in srgb, var(--c) 22%, transparent);
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+  }
+  .pub__link:hover {
+    background: color-mix(in srgb, var(--c) 16%, transparent);
+    text-decoration: none;
+  }
+  .pub__link-icon {
+    display: inline-flex;
+  }
+  .pub__link-icon :global(svg) {
+    width: 13px;
+    height: 13px;
+    display: block;
+  }
+
+  @media (max-width: 600px) {
+    .pub {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .pub__thumb,
+    .pub__thumb img {
+      width: 100%;
+      max-width: 220px;
+    }
+  }
+</style>
