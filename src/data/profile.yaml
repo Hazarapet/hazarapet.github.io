@@ -13,13 +13,13 @@ photo: "/images/avatar3.png"
 
 # A short bio. Basic HTML (e.g. <a>, <strong>) is allowed.
 bio: >
-  I am a Senior Machine Learning Researcher at the
-  <a href="https://deeporigin.com/" target="_blank">Deep Origin</a>, working on <strong>drug discover, bioscience</strong>. 
+  I am a Senior Machine Learning Researcher at
+  <a href="https://deeporigin.com/" target="_blank">Deep Origin</a>, working on <strong>drug discovery</strong> and <strong>bioscience</strong>. 
   Previously I have been a Senior Machine Learning Scientist at <a href="https://picsart.com/" target="_blank">Picsart</a>, 
-  working on <strong>computer vision</strong> tasks such as text-to-image synthisis, semantic and instance segmentation.
+  working on <strong>computer vision</strong> tasks such as text-to-image synthesis, semantic and instance segmentation.
   <br/><br/>
-  I hold <strong>M.Sc.</strong> degree in Informatics and Applied Mathematics from 
-  <a href="https://www.ysu.am/en" target="_blank">Yerevan State University</a> and have 5 years of experience in software engineering.
+  I hold an <strong>M.Sc.</strong> degree in Informatics and Applied Mathematics from 
+  <a href="https://www.ysu.am/en" target="_blank">Yerevan State University</a> and have five years of experience in software engineering.
 
 # Shown as a "·"-separated line under the bio.
 interests:
