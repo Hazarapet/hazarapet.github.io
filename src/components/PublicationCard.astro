@@ -17,6 +17,11 @@ const META: Record<string, { label: string; color: string; icon: string }> = {
     color: '#B31B1B',
     icon: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>',
   },
+  biorxiv: {
+    label: 'bioRxiv',
+    color: '#0F766E',
+    icon: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.8 18.4 14 10.67V6.5l1.35-1.69c.26-.33.03-.81-.39-.81H9.04c-.42 0-.65.48-.39.81L10 6.5v4.17L4.2 18.4c-.49.66-.02 1.6.8 1.6h14c.82 0 1.29-.94.8-1.6z"/></svg>',
+  },
   pdf: {
     label: 'PDF',
     color: '#DC2626',
@@ -53,7 +58,7 @@ const META: Record<string, { label: string; color: string; icon: string }> = {
     icon: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 17h3l2-4V7H5v6h3l-2 4zm8 0h3l2-4V7h-6v6h3l-2 4z"/></svg>',
   },
 };
-const order = ['arxiv', 'pdf', 'code', 'project', 'poster', 'slides', 'video', 'bibtex'];
+const order = ['arxiv', 'biorxiv', 'pdf', 'code', 'project', 'poster', 'slides', 'video', 'bibtex'];
 const links = order
   .filter((key) => pub.links?.[key])
   .map((key) => ({ ...META[key], href: pub.links![key] }));

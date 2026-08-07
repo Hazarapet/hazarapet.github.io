@@ -1,4 +1,6 @@
 # Newest first. `text` allows basic HTML (links, bold).
+- date: "Aug 2026"
+  text: "Our <a href='https://www.biorxiv.org/content/10.64898/2026.08.03.742480v1' target='_blank'>recent work</a> was released in bioRxiv."
 - date: "Dec 2025"
   text: "Joined <a href='https://deeporigin.com/' target='_blank'>Deep Origin</a> as a <strong>Senior Machine Learning Researcher</strong>."
 - date: "Sep 2023"

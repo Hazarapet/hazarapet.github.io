@@ -2,6 +2,18 @@
 # `authors` allows HTML — wrap your own name in <strong> to highlight it.
 # Any link left out is simply not shown.
 
+- title: "Overcoming the Accuracy–Generalization Tradeoff in Docking and Scoring for Prospective Virtual Screening"
+  authors: "Garik Petrosyan, Vahagn Altunyan, Tsolak Ghukasyan, Tigran M. Abramyan, Grigor Arakelov, Aram Davtyan, Tigran Aghajanyan, Iskander Nakipov, Gagik Navasardyan, Arman Fahradyan, <strong>Hazarapet Tunanyan</strong>, Arman Simonyan, Paweł Ł Janczyk, Das De Silva, Hayk Saribekyan, Lev Tsidilkovski, Vahram Arakelov, Narek Ginoyan, Hasmik Mnatsakanyan, Max Ratnikov, Khachik Smbatyan, Ashot Papoyan, and <a href='https://papoian.chem.umd.edu/' target='_blank'>Garegin A. Papoian</a>"
+  venue: "bioRxiv preprint"
+  year: 2026
+  thumbnail: "/images/publications/deep-origin-paper1-half.png"
+  featured: true
+  abstract: >
+    We introduce DODock and DOScore, docking and scoring ML/physics hybrid frameworks that are also highly expressive, 
+    yet generalize much better out of distribution compared with the prior ML approaches.
+  links:
+    biorxiv: "https://www.biorxiv.org/content/10.64898/2026.08.03.742480v1"
+
 - title: "Multi-Concept T2I-Zero: Tweaking Only The Text Embeddings and Nothing Else"
   authors: "<strong>Hazarapet Tunanyan</strong>, <a href='https://ir1d.github.io/' target='_blank'>Dejia Xu</a>, <a href='https://www.linkedin.com/in/shant-navasardyan-1302aa149/' target='_blank'>Shant Navasardyan</a>, <a href='https://www.ece.utexas.edu/people/faculty/atlas-wang' target='_blank'>Zhangyang Wang</a>, and <a href='https://www.humphreyshi.com/' target='_blank'>Humphrey Shi</a>"
   venue: "Arxiv preprint"
